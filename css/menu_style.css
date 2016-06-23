@@ -1,0 +1,123 @@
+﻿*{margin: 0; padding: 0;}
+ 
+body{
+	font-family: arial, helvetica, sans-serif;
+	font-size: 14px;
+	position:relative;
+	/*left:280px; posiciona a 450px para a esquerda */
+	/*top: 50px;  posiciona a 70px para baixo */
+	background-image:url("imagens/fundo.jpg");
+	opacity: 1;
+}
+ a{
+ text-decoration:none;
+	
+}
+
+.welcome{
+	width:3px;
+	height:3px;
+	position:relative;
+	left:27%;
+	top:-35px;
+	border-radius: 5px;
+	z-index:1;
+}
+
+.emporio{
+	width:900px;
+	position:relative;
+	left:65%;
+	top:20%;
+	border: 1px solid #F00;
+	border-radius: 20px;
+	animation:running;
+	z-index:1;
+}
+
+/* .navbar{
+	list-style:none;
+	position:fixed;
+	top:20px;
+    left: 50px;
+	border:0px solid #c0c0c0;
+	z-index:2;
+}
+nav{
+    position:fixed;
+	float: left;
+    width: 100%;
+
+	height: 80px;
+    z-index:2;
+}*/
+.navbar li{
+/*	position:relative;
+	float:left;
+    left: 1px;
+	border:1px solid #000;*/
+	z-index:2;
+}
+
+.navbar li{color:#333; text-decoration:none; padding:0px 1px; display:block;}
+.navbar a{color:#000000; text-decoration:none; padding:3px 2px; display:block;}
+ 
+.navbar li a:hover{
+	background:#FFF;
+	color:#000;
+	-moz-box-shadow:0 3px 10px 0 #F00;
+	-webkit-box-shadow:0 3px 10px 0 #F00;
+	text-shadow:0px 0px 5px #fff;
+}
+.navbar li  ul{
+	position:absolute;
+	top:40px;
+	left:0;
+	background-color:#fff;
+	display:none;
+} 
+.navbar li:hover ul, .navbar li.over ul{display:block;}
+
+.navbar li ul li{
+	border:1px solid #c0c0c0;
+	display:block;
+	width:170px;
+}
+
+/* O container geral define a perspectiva */  
+.flip-container { perspective: 1000; }  	
+
+/* vira os containers frente e verso quando o mouse passa em cima */
+.flip-container:hover .flipper, .flip-container.hover .flipper {  		
+  transform: rotateY(180deg);  	
+}    
+.flip-container, .front, .back {  	
+  width: 320px;  	
+  height: 480px;  
+}
+.flip-container{
+	position:relative;
+	right:15%;
+
+}
+
+/* define a velocidade da transição */
+.flipper {  	
+  transition: 2.6s;  	
+  transform-style: preserve-3d;    	
+  position: relative;  
+}
+    
+/* esconde o verso durante a animação */
+.front, .back {  	
+  backface-visibility: hidden;    	
+  position: absolute;  	
+  top: 0;  	
+ left: 0;  
+}
+    
+/* frente posicionada sobre o verso */
+.front { z-index: 2;  }    
+
+/* verso inicialmente escondido */
+.back { transform: rotateY(180deg); }

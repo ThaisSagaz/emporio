@@ -1,0 +1,35 @@
+[33mcommit 55f8a43290607c0739e45e1db2c94b9dc57f0d4c[m
+Author: Gabriel Lima <Gabriel Lima>
+Date:   Wed Mar 9 17:27:03 2016 -0300
+
+    Atualizações em todos os arquivos presentes(todos são iguais a inicio.php porque ainda não tem os includes)sempre que for abrir um novo arquivoterá que copiar o arquivo inicio.php
+
+[33mcommit d2c98dd4dad41f9da110be279e56e7f46482081f[m
+Author: Bruno Gomes <Bruno Gomes>
+Date:   Wed Mar 9 00:36:57 2016 -0300
+
+    html das páginas cadatraringrediente.php, nova_compra_de ingrediente, footer.php e menu.php
+
+[33mcommit e485cc469e4dc96f150ab6b08980101466e76774[m
+Author: Gabriel Lima <Gabriel Lima>
+Date:   Thu Mar 3 18:29:47 2016 -0300
+
+    Arquivos alterados para PHP 1.1
+
+[33mcommit 5ac8dc108e89a2598474b621e989a56ce28e7f61[m
+Author: Gabriel Lima <Gabriel Lima>
+Date:   Thu Mar 3 16:05:54 2016 -0300
+
+    Arquivos alterados para PHP
+
+[33mcommit 58b897d0f87320c6852b7acfdd9100160c0521ba[m
+Author: Bruno Gomes <Bruno Gomes>
+Date:   Thu Mar 3 12:24:47 2016 -0300
+
+    index atualizado
+
+[33mcommit fdecddcd0e9afdd3050a15f0fb0ff65ee565165a[m
+Author: Bruno Gomes <Bruno Gomes>
+Date:   Wed Mar 2 17:14:40 2016 -0300
+
+    Projeto para atualizar

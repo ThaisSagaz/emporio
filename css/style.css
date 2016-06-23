@@ -1,0 +1,210 @@
+﻿*{
+	margin:0;
+	padding:0;
+	outline:none;
+	list-style:none;	
+}
+body{
+	font-family: arial, helvetica, sans-serif;
+	font-size: 14px;
+	position:relative;
+	/*left:280px; posiciona a 450px para a esquerda */
+	/*top: 50px;  posiciona a 70px para baixo */
+	background-image:url("imagens/fundo.jpg");
+	opacity: 1;
+	}
+#login{	
+	position:relative;
+	/*left:60%;*/
+	width:400px;
+	margin:0 auto;
+	top:50px;
+	border:1px solid #fff;
+	padding:40px;
+	z-index:1;
+}
+#login_index{
+	position:relative;
+	left:30px;
+	width:270px;
+	margin:0 auto;
+	top:50px;
+	border:1px solid #fff;
+	padding:40px;
+	z-index:1;
+}
+
+#Vendas{
+	position:relative;
+	width:740px;
+	height:	420px;
+	margin:0 auto;
+	top:85px;
+	border:1px solid #000000;
+	padding:30px;
+	z-index:1;
+}
+
+#Encomenda{	
+	width:500px;
+	margin:0 auto;
+	position:relative;
+	top:30px;
+	border:1px solid #CCC;
+	padding:40px;
+	
+}
+
+#cadastro{	
+	width:400px;
+	margin:0 auto;
+	position:absolute;
+	left: 230px; /* posiciona a 450px para a esquerda */ 
+	top: 90px; /* posiciona a 70px para baixo */
+	padding:7px
+	top:30px;
+	border:1px solid #f1f1f1;
+	padding:30px;
+	
+}
+.logo{
+	width:450px;
+	height:150px;
+	margin:0 auto;
+	position:absolute;
+	left: 400px; /* posiciona a 500px para a esquerda */ 
+	top: 70px; /* posiciona a 70px para baixo */
+	padding:7px
+	z-index:1;
+}
+ a{
+ text-decoration:none;
+	
+}
+
+
+#login label{
+	
+	display:block;
+	padding-top:5px;
+	
+}
+.acomodar{
+	margin:0 auto;
+	width:250px;
+
+	
+}
+
+.acomodar_encomenda{
+	
+	margin:0 auto;
+	left:0px;
+	width:250px;
+	
+}
+
+.txt{
+	border:none;
+	height:40px;
+	width:250px;
+	border:thin solid #999;	
+
+}
+
+.txt_Venda{
+	border:none;
+	height:20px;
+	width:250px;
+	border:thin solid #999;	
+
+}
+
+.produto{
+	border:none;
+	height:150px;
+	width:280px;
+	border:thin solid #999;	
+
+}
+
+.select{
+width:220px;
+height:30px;
+}
+
+.select_Venda{
+width:250px;
+height:38px;
+}
+
+.select:hover{
+color:#003;
+-moz-box-shadow:0 3px 10px 0 #F00;
+-webkit-box-shadow:0 3px 10px 0 #F00;
+text-shadow:0px 0px 5px #F00;
+
+}
+
+.txt:focus{
+	border:thin solid #F00;
+	box-shadow:0 1px 10px #F00;
+	-webkit-box-shadow:0 1px 8px #F00;
+	-moz-box-shadow:0 1px 8px #F00;
+	}
+.sb{
+	display:block;
+	border:none;
+	margin-top:10px;
+	width:250px;
+	height:40px;
+	cursor:pointer;
+	font:300 22px Oswald;
+	color:#fff;
+	background:#D87;
+	}
+
+.sb_Venda{
+	display:block;
+	border:none;
+	margin-top:10px;
+	width:250px;
+	height:40px;
+	cursor:pointer;
+	font:300 22px Oswald;
+	color:#F00;
+	background:#7aba7b;
+	}
+
+
+.sb_Venda:hover{
+	background:#0CF;
+	color:#FFF;
+}
+.sb:hover{
+	background:#999;
+	color:#FFF;
+	
+}
+
+/* Classes de herança */
+.bradius{
+border-radius:6px;
+-webkit-border-radius:6px;
+-moz-border-radius:6px;	
+	
+}
+.fleft{
+	float:left;
+}
+.fright{
+	
+}
+/*Multiplos Estilos*/
+.txt,txt:focus,.sb,.sb:hover{
+
+	transition:all 0.5s linear;
+	-webkit-transition:all 0.5s linear;
+	-moz-transition:all 0.5s linear;
+	
+}
