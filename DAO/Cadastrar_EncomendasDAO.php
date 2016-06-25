@@ -46,7 +46,7 @@ $sql = "INSERT INTO encomendas (cod_cliente,dtpedido,dtentrega,Valor,totalpago) 
 //d($_POST,$totalprodutos);
     for( $i=0; $i < $totalprodutos; $i++ ) {
 
-       $sql2 = "INSERT INTO produtos_has_encomedas (Produtos_cod_Produto,quantidade,Encomedas_cod_Encomenda) VALUES ( ".$id_encomenda.",,  '".str_replace(",",".",$_POST["qtd_$i"])."',".$_POST["produto_$i"].")";
+       $sql2 = "INSERT INTO produtos_has_encomedas (Produtos_cod_Produto,quantidade,Encomedas_cod_Encomenda) VALUES (".$_POST["produto_$i"].",  '".str_replace(",",".",$_POST["qtd_$i"])."', ".$id_encomenda.")";
 
 //ddd($sql2);
               mysql_query ($sql2, $conn);

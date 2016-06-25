@@ -11,15 +11,9 @@
   $pdo = Database::connect();
   $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-            $sql = "select  DISTINCT DATE_FORMAT(dtpedido,'%d/%m/%y') as dtpedido,DATE_FORMAT(dtentrega, '%d/%m/%y') as dtentrega,
-                            quantidade,clientes.nome as cliente,valor,produtos.nome as produtos
-                            from produtos_has_encomedas as prod_enco
-                    inner join produtos
-                        on produtos.cod_Produto = prod_enco.Produtos_cod_Produto
-                    inner join encomendas as enco
-                        on enco.cod_Encomenda = prod_enco.Encomedas_cod_Encomenda
-                    inner join clientes on clientes.cod_Cliente = enco.cod_cliente
-                    where cod_Encomenda =   $id";
+            $sql = "select produtos_has_encomedas.*, produtos.nome as produto, encomendas.Valor as valortotal, DATE_FORMAT(dtpedido,'%d/%m/%y') as dtpedido,DATE_FORMAT(dtentrega, '%d/%m/%y') as dtentrega from produtos_has_encomedas 
+            inner join produtos on produtos.cod_Produto = produtos_has_encomedas.Produtos_cod_Produto inner join encomendas on encomendas.cod_Encomenda = produtos_has_encomedas.Encomedas_cod_Encomenda 
+            inner join clientes on clientes.cod_Cliente = encomendas.cod_cliente where cod_Encomenda = $id";                
  $q = $pdo->prepare($sql);
     $q->execute(array($id));
     $data = $q->fetch(PDO::FETCH_ASSOC);

@@ -30,7 +30,7 @@ if( $_SERVER['REQUEST_METHOD']=='POST')
 
 $sql = "INSERT INTO estoque (identificacao,preco,cod_ingrediente,quantidade_total,quantidade) 
 VALUES ('".$_POST['identificacao']."','".$_POST['preco']."', '".$_POST['cod_tipoingrediente']."',  '".$_POST['total']."', '".$_POST['QtdDeId']."') 
-ON DUPLICATE KEY UPDATE quantidade_total = quantidade_total +'".$_POST['total']."'";
+ON DUPLICATE KEY UPDATE quantidade_total = quantidade_total +'".$_POST['total']."', preco = '".$_POST['preco']."',  identificacao = '".$_POST['identificacao']."' ";
 
 //ddd($sql);
 
@@ -42,4 +42,4 @@ ON DUPLICATE KEY UPDATE quantidade_total = quantidade_total +'".$_POST['total'].
   
 
 
-?>
+?>  

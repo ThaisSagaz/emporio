@@ -173,9 +173,15 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
              $pdo = Database::connect();
 
-             $sql =" select fichastecnicas_has_produtofinal.*, fichastecnicas.nome as ficha, produtofinal.valortotal as valortotal,produtofinal.valorvenda as valorvenda, produtofinal.tamanho as tamanho from fichastecnicas_has_produtofinal inner join produtofinal on produtofinal.cod_produtofinal = fichastecnicas_has_produtofinal.produtofinal_cod_produtofinal inner join fichastecnicas on fichastecnicas.cod_fichaTecnica = fichastecnicas_has_produtofinal.produtofinal_cod_produtofinal where cod_produtofinal=   $id";
+             $sql =" select fichastecnicas_has_produtofinal.*, fichastecnicas.nome as ficha, produtofinal.valortotal as valortotal,produtofinal.valorvenda as valorvenda, produtofinal.tamanho as tamanho from fichastecnicas_has_produtofinal 
+             inner join produtofinal on produtofinal.cod_produtofinal = fichastecnicas_has_produtofinal.produtofinal_cod_produtofinal
+             inner join fichastecnicas on fichastecnicas.cod_fichaTecnica = fichastecnicas_has_produtofinal.fichaTecnica_cod_fichaTecnica where produtofinal_cod_produtofinal =   $id";
 
 
+
+select produtos_has_encomedas.*, produtos.nome as produto, encomendas.Valor as valortotal, DATE_FORMAT(dtpedido,'%d/%m/%y') as dtpedido,DATE_FORMAT(dtentrega, '%d/%m/%y') as dtentrega from produtos_has_encomedas 
+inner join produtos on produtos.cod_Produto = produtos_has_encomedas.Produtos_cod_Produto
+inner join encomendas on encomendas.cod_Encomenda = produtos_has_encomedas.Produtos_cod_Produto where cod_Encomenda = 7
 
             foreach ($pdo->query($sql) as $row) {
 

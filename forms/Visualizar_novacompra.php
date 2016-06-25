@@ -22,7 +22,7 @@ if (!isset($_SESSION['UsuarioID'])) {
         $pdo = Database::connect();
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         $sql = "select estoque .*, ingrediente.nome as ingrediente from estoque 
-        inner join ingrediente on estoque.cod_ingrediente = ingrediente.cod_ingrediente where cod_novacompra";;
+        inner join ingrediente on estoque.cod_ingrediente = ingrediente.cod_ingrediente where cod_novacompra = '$id'";;
         $q = $pdo->prepare($sql);
         $q->execute(array($id));
         $data = $q->fetch(PDO::FETCH_ASSOC);
